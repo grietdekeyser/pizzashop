@@ -1,0 +1,309 @@
+/* TYPOGRAFIE */
+
+body {
+	font-family: Verdana, sans-serif;
+}
+
+input, textarea, select, button {
+	font-family: Verdana, sans-serif;
+}
+
+button {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+button.small {
+	font-size: 0.8rem;
+}
+
+dt {
+	font-weight: bold;
+}
+
+/* KLEUREN */
+
+body {
+	background-color: #a7441c21;
+}
+
+footer {
+	border-top: 1px solid #29190e63;
+}
+
+button {
+	color: white;
+	background-color: #990005;
+}
+
+.error:not(input) {
+	color: red;
+}
+
+.error a {
+	color: inherit;
+}
+
+/* STRUCTUUR */
+
+body {
+	margin: 0;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+button {
+	border-radius: 4px;
+	border: none;
+	padding: 0.30rem 0.6rem;
+	cursor: pointer;
+}
+
+dd {
+	margin: 0;
+	padding-bottom: 1rem;
+}
+
+
+/* Header - menu */
+.hero {
+	height: 10rem;
+	background-image: url("../Img/pizza_header.jpg");
+	background-color: #a9390c;
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+}
+
+.hero .menu {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.hero .container {
+	color: white;
+}
+
+.hero-titel h1 {
+	font-size: 3rem;
+	margin: 0;
+}
+
+.hero-titel small {
+	text-align: right;
+}
+
+.hero ul:not(.submenu) {
+	list-style-type: none;
+	display: flex;
+}
+
+.hero li {
+	display: inline-block;
+}
+
+.hero a {
+	text-decoration: none;
+	color: white;
+}
+
+.hero nav a, .hero nav li label {
+	font-weight: bold;
+	padding: 1rem;
+	background-color: hsla(0, 100%, 85%, 0.4);
+	cursor: pointer;
+}
+
+.hero nav a:hover, .hero nav label:hover, .hero nav .active {
+	background-color: #990005;
+}
+
+/* Submenu account */
+.hero input#submenu {
+    display: none;
+}
+
+.hero ul.submenu {
+	display: none;
+	position: absolute;
+	list-style-type: none;
+	padding: 1rem 0 0 0; 
+}
+
+.hero .submenu li {
+	display: block;
+	width: 100%;
+}
+
+.hero .submenu a {
+	font-weight: normal;
+	display: block;
+	padding: 0.75rem 1rem;
+}
+
+.hero label i {
+	padding-right: 1rem;
+}
+
+.hero label .fa-caret-up {
+	display: none;
+}
+
+.hero input:checked ~ label .fa-caret-down  {
+	display: none;
+}
+
+.hero input:checked ~ ul.submenu {
+	display: block;
+}
+
+.hero input:checked ~ label .fa-caret-up {
+	display: inline;
+}
+
+/* Footer */
+
+.pageContainer {
+  	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+}
+
+.content {
+	flex: 1;
+}
+
+footer p {
+	text-align: center;
+}
+
+/* Registreren, inloggen, gegevens aanpassen, gastenboek */
+
+form section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+
+form label {
+	flex: 0 0 180px;
+}
+
+form label + *{
+	flex: 0 0 300px;
+	margin-right: 1rem;
+}
+
+form textarea {
+	max-width: 298px;
+	height: 32px;
+	resize: none;
+}
+
+form p.error {
+	flex: 1 0 200px;
+}
+
+form input.error, form textarea.error {
+	border: 1px solid red;
+}
+
+/* Home */
+
+div.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1200px;
+}
+
+.flex > section {
+	flex: 1 0 250px;
+}
+.flex > section.left {
+	padding-right: 2rem;
+}
+
+/* Bestellen, Afrekenen, bevestiging */
+
+div.order {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1200px;
+	padding-bottom: 2rem;
+}
+
+div.order section.left {
+	padding-right: 1rem;
+}
+
+div.order section.left {
+	flex: 1 0 350px;
+}
+
+div.order section.right {
+	flex: 1 0 350px;
+}
+
+/* Menu producten */
+
+.menuProduct div.product {
+	display: flex;
+	padding-bottom: 1rem;
+}
+
+.menuProduct img {
+	max-width: 80px;
+	height: 80px;
+	padding-right: 0.5rem;
+}
+
+/* Winkelmandje */
+
+form.changeCart p, div.cartLine p {
+	display: inline;
+}
+
+form.changeCart, div.cartLine, p.pizzaTotaal {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 500px;
+}
+
+form.changeCart p.pizzaAantal, div.cartLine p.pizzaAantal {
+	flex: 0 0 40px;
+}
+
+form.changeCart p.pizzaNaam, div.cartLine p.pizzaNaam {
+	flex: 1 0 140px;
+}
+
+form.changeCart div {
+	margin: auto 1rem;
+	flex: 1 0 120px;
+	text-align: center;
+}
+
+form.changeCart div button{
+	display: inline-block;
+}
+
+form.changeCart p.pizzaPrijs {
+	flex: 0 0 70px;
+	margin: auto 0;
+}
+
+p.pizzaTotaal strong.som {
+	flex: 1 0 190px;
+	margin-right: 1rem;
+}
+
+p.pizzaTotaal:not(.promo) {
+	padding-top: 1rem;
+	border-top: 1px solid #29190e63;
+}
